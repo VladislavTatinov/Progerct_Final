@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPulse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <header>
+        <h1>PixelPulse</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="filterProducts('NVIDIA')">NVIDIA</a></li>
+                <li><a href="#" onclick="filterProducts('AMD')">AMD</a></li>
+                <li><a href="#" onclick="filterProducts('Intel')">Intel</a></li>
+                <li><a href="#" onclick="resetFilter()">Reset</a></li>
+            </ul>
+        </nav>
+        <img class="nvidia-logo" src="razer-icon-23.jpg" alt="Nvidia Logo">
+    </header>
+    
+    <main>
+        <section class="slider">
+            <!-- Your slider content here -->
+        </section>
+        <section class="products" id="products-section">
+            <!-- Products will be dynamically loaded here -->
+        </section>
+        <section class="products" id="products-section-2">
+            <!-- Products will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <aside class="cart" id="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-items" class="cart-items-list">
+            <!-- Cart items will be dynamically loaded here -->
+        </ul>
+        <div class="total-price">
+            <p>Общая стоимость:</p>
+            <span id="total-price">0</span> руб.
+        </div>
+    </aside>
+    
+    <!-- Кнопка "Оформить заказ" в разделе "Корзина" -->
+    <button id="checkout-button">Оформить заказ</button>
+        
+    <!-- Модальное окно -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="modalClose">&times;</span>
+                <h2 id="modalProductName"></h2>
+                <img id="modalProductImage" src="" alt="">
+                <p id="modalProductPrice"></p>
+                <p id="modalProductDescription"></p>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 PixelPulse. Все права защищены.</p>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
